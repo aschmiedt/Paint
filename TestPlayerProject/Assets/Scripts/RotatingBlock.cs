@@ -5,7 +5,7 @@ public class RotatingBlock : MonoBehaviour {
 	private int down = 1;
 	public GameObject player;
 	private int distanceToPlayer = 6;
-	public float fallSpeed = 20.0f;
+	public float fallSpeed = 30.0f;
 	// Use this for initialization
 	void Start () {
 	
@@ -18,11 +18,11 @@ public class RotatingBlock : MonoBehaviour {
 		}
 		if (down == 0) {
 			// Slowly rotate the object around its X axis at 1 degree/second.
-			transform.Rotate(Vector3.right * Time.deltaTime * fallSpeed);
+			transform.Rotate(Vector3.right  * fallSpeed);
 			
 			// ... at the same time as spinning relative to the global 
 			// Y axis at the same speed.
-			transform.Rotate(Vector3.up * Time.deltaTime * fallSpeed, Space.World);
+			//transform.Rotate(Vector3.down * Time.deltaTime * fallSpeed, Space.World);
 		}
 	}
 }
