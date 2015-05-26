@@ -18,6 +18,7 @@ public class FallingBlock : MonoBehaviour {
 			down = 0;
 		}
 		if (down == 0) {
+			print(Time.deltaTime);
 			transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
 		}
 	}
